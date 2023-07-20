@@ -1,13 +1,35 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <HeaderComp></HeaderComp>
+
+    <router-view />
+
+    <FooterComp></FooterComp>
   </div>
 </template>
+<script>
 
+import HeaderComp from './components/HeaderComp.vue';
+import FooterComp from './components/FooterComp.vue';
+
+
+export default {
+  name: 'App',
+  components: {
+    FooterComp,
+    HeaderComp,
+
+  },
+
+  data() {
+    return {
+
+    };
+  },
+
+
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
